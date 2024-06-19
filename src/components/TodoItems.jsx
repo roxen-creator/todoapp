@@ -9,7 +9,10 @@ export default function TodoItems({ items }) {
         {" "}
         {items}
         <span>
-          <button className={styles.deleteButton} onClick={handleDelete}>
+          <button
+            className={styles.deleteButton}
+            onClick={() => handleDelete(items)}
+          >
             x
           </button>
         </span>
