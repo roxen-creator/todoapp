@@ -4,15 +4,14 @@ export default function TodoItems({ items, todos, setTodos }) {
     console.log("button pressed for item", items);
     setTodos(
       todos.filter((todo) => {
-        todo !== items;
+        return todo !== items;
       })
     );
   }
   return (
     <div className={styles.item}>
       <div className={styles.itemName}>
-        {" "}
-        {items}
+        {items.name}
         <span>
           <button
             className={styles.deleteButton}
